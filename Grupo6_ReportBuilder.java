@@ -18,7 +18,7 @@ class Grupo6_ReportBuilder {
         }
         return relatorio;
     }
-
+    
     public static void main(String[] args) {
         System.out.println(montarRelatorio("Carla", "TI", "Analista", 2025, 9, 18));
     }
