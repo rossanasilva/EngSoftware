@@ -2,15 +2,8 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-/**
- * Classe responsável por construir a string final do relatório.
- * Suas responsabilidades são focadas apenas na montagem e formatação.
- */
 class RelatorioBuilder {
 
-    /**
-     * Monta o relatório com base nos objetos fornecidos.
-     */
     public String montarRelatorio(Funcionario funcionario, LocalDate data, List<String> atividades) {
         StringBuilder relatorio = new StringBuilder();
 
@@ -24,7 +17,7 @@ class RelatorioBuilder {
 
     private void construirCabecalho(StringBuilder sb, Funcionario f) {
         sb.append("Relatório de ").append(f.getNome())
-          .append(" - ").append(f.getDepartamento().getNomeExibicao()) // Usa o nome formal do enum
+          .append(" - ").append(f.getDepartamento().getNomeExibicao())
           .append(" (").append(f.getCargo()).append(")\n");
     }
 
@@ -45,8 +38,6 @@ class RelatorioBuilder {
     }
 
     private void construirRodape(StringBuilder sb, Funcionario f) {
-
-        // A verificação com enum é mais segura e legível
         if (f.getDepartamento() == Departamento.TI) {
             sb.append("Recursos de TI utilizados: Git, CI/CD\n");
         }

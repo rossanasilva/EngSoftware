@@ -1,5 +1,3 @@
-// Relatórios de Funcionários: geração de relatórios textuais de atividades de
-// colaboradores
 
 class Grupo6_ReportBuilder {
     public static String montarRelatorio(String nome, String departamento, String cargo, int ano, int mes, int dia) {
@@ -18,7 +16,7 @@ class Grupo6_ReportBuilder {
         }
         return relatorio;
     }
-    
+
     public static void main(String[] args) {
         System.out.println(montarRelatorio("Carla", "TI", "Analista", 2025, 9, 18));
     }
