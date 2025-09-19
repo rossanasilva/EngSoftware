@@ -45,7 +45,7 @@ class RelatorioBuilder {
     }
 
     private void construirRodape(StringBuilder sb, Funcionario f) {
-        sb.append("Resumo: OK\n");
+
         // A verificação com enum é mais segura e legível
         if (f.getDepartamento() == Departamento.TI) {
             sb.append("Recursos de TI utilizados: Git, CI/CD\n");
